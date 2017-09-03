@@ -1,7 +1,38 @@
 body {
-	padding: 0;
+    padding: 0;
+    margin: 0;
+    background: #f6f9fc;
+    color: #222;
+    font-family: sans-serif;
+}
+
+div#cgit {
+    background: transparent;
+    padding: 0;
 }
 
 div.content {
-	background-color: #fff;
+    background-color: #fff;
+}
+
+div#cgit table.blob pre {
+    overflow: auto;
+    max-width: 90vw;
+}
+
+@media (max-width: 575px) {
+    .list tr td:nth-child(1),
+    .list tr th:nth-child(1),
+    .tabs,
+    div#cgit table.blob td.linenumbers {
+        display: none;
+    }
+
+    div#cgit {
+        margin-top: 2em;
+    }
+
+    div#cgit div.content {
+        padding-left: 4px;
+    }
 }
