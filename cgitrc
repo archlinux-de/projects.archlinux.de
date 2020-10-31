@@ -1,6 +1,5 @@
 virtual-root=/
 cache-root=/tmp
-#cache-size=8192
 
 robots=noindex, nofollow
 max-repodesc-length=50
@@ -12,6 +11,8 @@ noheader=1
 embedded=1
 local-time=1
 enable-index-owner=0
+noplainemail=1
+enable-http-clone=0
 
 # security
 #mimetype.html=text/html
@@ -22,44 +23,11 @@ mimetype.gif=image/gif
 mimetype.svg=image/svg+xml
 mimetype.pdf=application/pdf
 
-snapshots=tar.gz
-
-source-filter=/usr/lib/cgit/filters/syntax-highlighting.sh
-commit-filter=/srv/http/vhosts/projects.archlinux.de/commit-filter.sh
-about-filter=/usr/lib/cgit/filters/about-formatting.sh
-
-readme=:README.md
-readme=:readme.md
-readme=:README.mkd
-readme=:readme.mkd
-readme=:README.rst
-readme=:readme.rst
-readme=:README.html
-readme=:readme.html
-readme=:README.htm
-readme=:readme.htm
-readme=:README.txt
-readme=:readme.txt
-readme=:README
-readme=:readme
-readme=:INSTALL.md
-readme=:install.md
-readme=:INSTALL.mkd
-readme=:install.mkd
-readme=:INSTALL.rst
-readme=:install.rst
-readme=:INSTALL.html
-readme=:install.html
-readme=:INSTALL.htm
-readme=:install.htm
-readme=:INSTALL.txt
-readme=:install.txt
-readme=:INSTALL
-readme=:install
+source-filter=/usr/lib/cgit/filters/syntax-highlighting.py
+commit-filter=/srv/http/vhosts/projects.archlinux.de/commit-links.sh
 
 max-stats=year
 max-blob-size=2048
 
 section=archlinux.org
-#clone-prefix=git://projects.archlinux.org https://projects.archlinux.org/git
 scan-path=/srv/projects/archlinux.org/
